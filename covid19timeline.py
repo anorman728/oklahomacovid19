@@ -1,12 +1,17 @@
 #!/usr/bin/python3
 
+# Date stuff
 from datetime import datetime
 from datetime import timedelta
 
+# Graph stuff
 import numpy as np
 import pandas as pd
 from pandas import Series, DataFrame
 import matplotlib.pyplot as plt
+
+# Data stuff
+import json
 
 # Starting date is '3/7/2020'
 startingdate = datetime(2020, 3, 7)
@@ -19,41 +24,8 @@ startingdate = datetime(2020, 3, 7)
 # What that graph shows is only *cumulative* counts of cases.  I've done the
 # subtraction on each successive day to find the counts of new cases per day.
 
-cumulativeCount = [
-    0, # Presumably starting with zero cases.
-    1,
-    1,
-    1,
-    2,
-    2,
-    2,
-    3,
-    4,
-    7,
-    10,
-    17,
-    29,
-    44,
-    49,
-    53,
-    67,
-    81,
-    106,
-    164,
-    248,
-    322,
-    377,
-    429,
-    481,
-    565,
-    719,
-    879,
-    988,
-    1159,
-    1252,
-    1327,
-    1472,
-]
+with open('covid19counts.json') as f:
+    cumulativeCount = json.load(f)
 
 # Because I keep forgetting what these are called-- "List comprehensions"
 
