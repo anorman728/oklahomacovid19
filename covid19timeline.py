@@ -44,4 +44,4 @@ plt.figtext(0.99, 0.95, updatedtime, horizontalalignment='right')
 plt.plot(dates, caseCountPerDay)
 
 #plt.show()
-fig.savefig('covid19oklahoma_test.png')
+fig.savefig('covid19oklahoma.png')
