@@ -57,14 +57,19 @@ cumulativeCount = [
 
 # Because I keep forgetting what these are called-- "List comprehensions"
 
+# Get data
 caseCountPerDay = [cumulativeCount[i] - cumulativeCount[i-1] for i in range(1, len(cumulativeCount))]
-
 dates = [(startingdate + timedelta(days=i)).strftime('%m/%d') for i in range(0, len(caseCountPerDay))]
 
+# Build figure
 fig = plt.figure()
 
-plt.xticks(rotation=60)
+# Build actual plot.
 
+plt.xticks(rotation=60)
+updatedtime = 'Updated ' + datetime.now().strftime('%Y/%m/%d')
+plt.figtext(0.99, 0.95, updatedtime, horizontalalignment='right')
 plt.plot(dates, caseCountPerDay)
+
 #plt.show()
 fig.savefig('covid19oklahoma.png')
