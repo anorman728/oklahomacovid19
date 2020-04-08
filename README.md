@@ -1,7 +1,7 @@
 # oklahomacovid19
 Just a small matplotlib chart of new Oklahoma covid-19 cases.
 
-![New Cases of Covid-19 in Oklahoma]('/covid19oklahoma.png')
+![New Cases of Covid-19 in Oklahoma](/covid19oklahoma.png)
 
 
 This data comes from the graph at the bottom of this page: https://coronavirus.health.ok.gov/
