@@ -32,6 +32,7 @@ with open('covid19counts.json') as f:
 # Get data
 caseCountPerDay = [cumulativeCount[i] - cumulativeCount[i-1] for i in range(1, len(cumulativeCount))]
 dates = [(startingdate + timedelta(days=i)).strftime('%m/%d') for i in range(0, len(caseCountPerDay))]
+#pairs = [(caseCountPerDay[i], dates[i]) for i in range(0, len(caseCountPerDay))]
 
 # Build figure
 fig = plt.figure()

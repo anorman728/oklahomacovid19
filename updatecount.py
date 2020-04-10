@@ -2,6 +2,7 @@
 from bs4 import BeautifulSoup
 import urllib.request
 import ssl
+import urllib.request
 
 ssl._create_default_https_context = ssl._create_unverified_context
 # I don't know why this works, but I get an SSL failure if I don't do it.
@@ -14,7 +15,8 @@ with open('covid19counts.json') as f:
     data = json.load(f)
 
 url = 'https://coronavirus.health.ok.gov/'
-content = urllib.request.urlopen(url)
+req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+content = urllib.request.urlopen(req)
 
 htmlcontent = content.read()
 
