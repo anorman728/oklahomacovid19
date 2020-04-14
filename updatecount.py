@@ -22,7 +22,7 @@ htmlcontent = content.read()
 
 soupObj = BeautifulSoup(htmlcontent, 'html.parser')
 
-leftcolneeded = 'Positive (In-State)'
+leftcolneeded = 'Cases'
 
 def findneededval():
     results = soupObj.find_all('tr')
