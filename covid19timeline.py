@@ -39,7 +39,7 @@ fig = plt.figure()
 
 # Build actual plot.
 
-plt.xticks(rotation=60)
+plt.xticks(rotation=90)
 updatedtime = 'Updated ' + datetime.now().strftime('%Y/%m/%d')
 plt.figtext(0.99, 0.95, updatedtime, horizontalalignment='right')
 plt.plot(dates, caseCountPerDay)
